@@ -42,8 +42,11 @@ extern "C" {
 #include <sys/mman.h>
 #endif
 
+#ifndef _WIN32
 #include <complex.h>
 #define HAVE_COMPLEX
+#endif
+
 #define HAVE_LONG_DOUBLE
 
 #ifndef NDEBUG

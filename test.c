@@ -19,8 +19,10 @@
 #include <errno.h>
 #endif
 
+#ifndef _WIN32
 #include <complex.h>
 #define HAVE_COMPLEX
+#endif
 
 #ifdef __cplusplus
 # define EXTERN_C extern "C"

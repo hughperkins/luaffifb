@@ -19,7 +19,7 @@ rem This the name of the dll that can be handed to LoadLibrary. This should not 
 @set LUA_DLL=lua5.1.dll
 
 :DEBUG
-@set DO_CL=cl.exe /nologo /c /MDd /FC /Zi /Od /W3 /WX /D_CRT_SECURE_NO_DEPRECATE /DLUA_FFI_BUILD_AS_DLL /I"msvc"
+@set DO_CL=cl.exe /nologo /c /MDd /FC /Zi /Od /W3 /WX /D_CRT_SECURE_NO_DEPRECATE /DLUA_FFI_BUILD_AS_DLL
 @set DO_LINK=link /nologo /debug
 @set DO_MT=mt /nologo
 
@@ -31,7 +31,7 @@ rem This the name of the dll that can be handed to LoadLibrary. This should not 
 @if "%1"=="test-release" goto :RELEASE
 
 :RELEASE
-@set DO_CL=cl.exe /nologo /c /MD /Ox /W3 /Zi /WX /D_CRT_SECURE_NO_DEPRECATE /DLUA_FFI_BUILD_AS_DLL /I"msvc"
+@set DO_CL=cl.exe /nologo /c /MD /Ox /W3 /Zi /WX /D_CRT_SECURE_NO_DEPRECATE /DLUA_FFI_BUILD_AS_DLL
 @set DO_LINK=link.exe /nologo /debug
 @set DO_MT=mt.exe /nologo
 @goto :COMPILE
